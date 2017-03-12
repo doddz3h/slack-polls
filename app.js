@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 /** GLOBALS **/
-// var MONGOLAB_URI = 'mongodb://localhost:27017/slackpolls'; // TEST VARIABLE
+// var MONGODB_URI = 'mongodb://localhost:27017/slackpolls'; // TEST VARIABLE
 // var PORT = 3000; // TEST VARIABLE
 var db,
     input,
@@ -51,8 +51,8 @@ var resetRequest = function() {
  * Save database to 'db'
  * Save Incoming Webhook URL (if it exists) to requestURL
  */
-console.log("Trying to connect to " + process.env.MONGOLAB_URI);
- MongoClient.connect(process.env.MONGOLAB_URI, function(err, database) {
+console.log("Trying to connect to " + process.env.MONGODB_URI);
+ MongoClient.connect(process.env.MONGODB_URI, function(err, database) {
     assert.equal(err, null);
     console.log("Connected correctly to server");
 
