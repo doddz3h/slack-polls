@@ -51,7 +51,7 @@ var resetRequest = function() {
  * Save database to 'db'
  * Save Incoming Webhook URL (if it exists) to requestURL
  */
-
+console.log("Trying to connect to " + process.env.MONGOLAB_URI);
  MongoClient.connect(process.env.MONGOLAB_URI, function(err, database) {
     assert.equal(err, null);
     console.log("Connected correctly to server");
