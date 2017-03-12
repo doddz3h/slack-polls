@@ -71,6 +71,7 @@ console.log("Trying to connect to " + process.env.MONGODB_URI);
 app.post('/', function(req, res, next) {
     console.log("POST request received at '/'.");
     // PARSE REQUEST TO INDIVIDUAL VARIABLES
+    console.log(req.body);
     input = {
         name: req.body.user_name,
         userId: req.body.user_id,
